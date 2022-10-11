@@ -1,0 +1,413 @@
+/*
+border: 5px solid rgb(255, 4, 4);
+Dark Blue Code: #004AAD rgb 0,74,173
+
+text area yg boleh resize
+html{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}*/
+
+/*INDEX PAGE*/
+.indexpage{
+  background: url('Source/cb.svg');
+  /*background-color: rgb(255, 255, 255); */
+  background-repeat: no-repeat; 
+  background-size: cover;
+  margin: 0px;
+  height: 100%;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+nav{
+  background-color: white;
+}
+
+.logo img, .iconbar img{
+  margin: 15px;
+  display: inline-block;
+  height: 40px;
+  /*Border right not visible coz 100% + 2 x 1px is more than 100%*/
+}
+
+.iconbar{
+  float: right;
+}
+
+.indexpage section{
+  /*background-color: rgba(62, 62, 62, 0.557); */
+  padding-left: 5%;
+  padding-top: 10%;
+  height: 89%;
+}
+
+.indexpage h1{
+  font-size: 60px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: rgb(0, 0, 0);
+  width: 40%;
+  margin: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .indexpage h1 {
+  font-size: 55px;
+  width: 50%;
+  }
+}
+
+.indexpage h4{
+  font-weight: lighter;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(0, 0, 0);
+  width: 45%;
+  margin: 10px 0 20px 0;  
+}
+
+.indexpage button{
+  background-color: #004AAD;
+  border-color: #004AAD;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.indexpage button:hover {
+  border-color: #004AAD;
+  color: #004AAD;
+  background-color: #fff;
+}
+
+/*LOGIN + REGISTER PAGE*/
+.loginpage{
+  background: url('Source/bgg.svg');
+  /*background-color: rgb(255, 255, 255); */
+  background-repeat: no-repeat; 
+  background-size: cover;
+  margin: 0px;
+  height: 100%;
+}
+
+.loginpage section{
+  height: 87%;
+}
+
+.formlogin {
+  background-color: #ffffff;
+  width: 28%;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5%;
+  box-shadow: 12px 12px 10px 1px rgba(0, 0, 0, 0.3);
+}
+
+.registerheight{
+  height: 83%;
+}
+
+.loginheight{
+  height: 80%;
+}
+
+.formlogin input[type=text], input[type=password]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 0px solid rgb(0, 0, 0);
+  background-color: rgba(231, 231, 231, 0.911);
+  box-sizing: border-box;
+}
+
+.formlogin h2 {
+  text-align: center;
+}
+
+.formlogin a{
+  color:black;
+}
+
+.formlogin button {
+  background-color: rgb(0, 74, 173);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.formlogin button:hover {
+  opacity: 0.8;
+}
+
+.formlogin .containerlogin {
+  padding: 0px 16px 16px 16px;
+  text-align: center;
+}
+
+/*HOME PAGE*/
+.homepage{
+  background-color: rgba(231, 231, 231, 1);
+  margin: 0px;
+  height: max-content;
+}
+
+.iconbars a{
+  display: inline-block;
+  height: 30px;
+  margin: 5px 0px;
+}
+
+.iconbars {
+  float: right;
+  margin: 15px;
+}
+
+.homepage section{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  line-height: 1.618em;
+}
+
+/*accshopper*/
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  max-width: 70rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.tabs {
+  border-radius: 20px;
+  position: relative;
+  background: #004AAD;
+  box-shadow: 8px 8px 10px 1px rgba(0, 0, 0, 0.3);
+  height: 1030px;
+  margin: 50px 0px;
+  border: 0px solid rgb(255, 4, 4);
+  /*box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit;*/
+}
+
+.tab-content {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 2.75em;
+  left: 0;
+  padding: 1.618rem;
+  background: #fff;
+  color: #2c3e50;
+  opacity: 0;
+  transition: all 0.35s;
+  text-align: center;
+  height: 92%;
+}
+
+.tabs::before,
+.tabs::after {
+  content: "";
+  display: table;
+}
+
+.tabs::after {
+  clear: both;
+}
+
+.tab {
+  float: left;
+}
+
+.tab-switch {
+  display: none;
+}
+
+.tab-label {
+  position: relative;
+  display: block;
+  line-height: 2.75em;
+  height: 3em;
+  padding: 0 1.618em;
+  background: #004AAD; 
+  border-right: 0.125rem solid #09428b;
+  color: #fff;
+  cursor: pointer;
+  top: 0;
+  transition: all 0.25s;
+  
+}
+
+.tab-label:hover {
+  top: -0.25rem;
+  transition: top 0.25s;
+}
+
+.tab-switch:checked + .tab-label {
+  background: #fff;
+  color: #2c3e50;
+  border-bottom: 0;
+  border-right: 0.125rem solid #fff;
+  transition: all 0.35s;
+  z-index: 1;
+  top: -0.0625rem;
+}
+
+.tab-switch:checked + label + .tab-content {
+  z-index: 2;
+  opacity: 1;
+  transition: all 0.35s;
+}
+
+
+.registerform label {
+  display: inline-block;
+  width: 20%;
+  text-align: right;
+  padding-right: 50px;
+}
+
+.registerform input {
+  padding: 7px 10px;
+  width: 30%;
+  background-color: rgb(244, 244, 244);
+  border: 1px solid black;
+}
+
+.registerform button {
+  color: white;
+  padding: 15px 15px;
+  margin: 20px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: #004AAD;
+  border-color: #004AAD;
+  font-weight: bold;
+  width: 10%;
+}
+
+.btn:hover {
+  border-color: #004AAD;
+  color: #004AAD;
+  background-color: #fff;
+}
+
+/*Responsives*/
+@media only screen and (min-width: 600px){
+
+}
+
+/*homeshopper*/
+.homeshopper{
+  background-color: rgba(231, 231, 231, 1);
+  margin: 0px;
+}
+
+/*Upload Product*/
+.containerUpload {
+  width: 50%;
+  background-color: white;
+  text-align: center;
+
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  padding: 50px;
+}
+
+.uploadTable td{
+  width: 30%;
+}
+
+.uploadTable input{
+  width: 100%;
+}
+
+.containerUpload button{
+  margin-top: 30px;
+  color: white;
+  padding: 15px 15px;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: #004AAD;
+  border-color: #004AAD;
+  font-weight: bold;
+  width: 40%;
+}
+
+/*Contact Us*/
+.contact h1, .contact p{
+  text-align: center;
+}
+.contact label{
+  display:block;
+  margin:1em 0 .2em;
+}
+/* single-line text, checkbox, and button */
+.contact input, .contact select, .contact textarea{
+  display:block;
+  width:100%;
+  padding:.3em;
+  font-size:20px;
+  background-color:#fbfbfb;
+  border:solid 1px #CCC;
+  resize:vertical;
+}
+.contact textarea{
+  min-height:180px;
+}
+.contact select{
+  color:indigo;
+}
+.contact option{
+  color:blue;
+  background: lavenderBlush;
+}
+.contact input[type=checkbox]{
+  display:inline;
+  width:auto;
+  color:red;
+}
+
+.contact input[type=submit]{
+  background:#004AAD;
+  margin:1em 0 0;
+  color:white;
+  border:none;
+  border-radius:8px;
+  transition:all .3s ease-out;
+}
+
+/* hover and focus states */
+.contact input[type=submit]:hover{
+  background: rgb(255, 255, 255);
+  color: #004AAD;
+  border: 2px solid #004AAD;
+}
+
+@media screen and (min-width:600px) {
+  /*  make the form 2 columns */
+  .contact form:after{
+    content:'';
+    display:block;
+    clear:both;
+  }
+  .column{
+    width:50%;
+    padding:1em;
+    float:left;
+  }
+}
+
+

@@ -1,0 +1,124 @@
+<html>
+
+<head>
+  <script src="external.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <title>e-Niaga</title>
+
+  <style>
+/*CHOOSE PAGE*/
+body::-webkit-scrollbar {
+  display: none;
+}
+
+nav{
+  background-color: white;
+}
+.logo img, .iconbar img{
+  margin: 15px;
+  display: inline-block;
+  height: 40px;
+  /*Border right not visible coz 100% + 2 x 1px is more than 100%*/
+}
+
+.iconbar{
+  float: right;
+}
+/*BACKGROUND*/
+.choosepage{
+  background: url('Source/bgg.svg');
+  /*background-color: rgb(255, 255, 255); */
+  background-repeat: no-repeat; 
+  background-size: cover;
+  margin: 0px;
+  height: 100%;
+}
+
+.choosepage section{
+  height: 87%;
+}
+
+.formchoose {
+  height: 360px;
+  width: 750px;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.formchoose img{
+  width:80px; height:80px;
+}
+
+.whiteside, .blueside {
+  background-color: rgb(255, 255, 255);
+  width: 300px;
+  padding: 20px;
+  border-radius: 5%;
+  box-shadow: 12px 12px 10px 1px rgba(0, 0, 0, 0.3);
+}
+
+.blueside button, .whiteside button{
+  background-color: rgb(0, 74, 173);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+}
+
+.blueside{
+  background-color: rgb(232, 232, 232);
+  float: right;
+  margin-right: 20px;
+}
+
+.whiteside{
+  float: left;
+  margin-left: 20px;
+}
+
+  </style>
+</head>
+
+<body class="choosepage">
+  <nav>
+    <a class="logo" href="index.html" title="e-NIAGA"><img src="Source/1(1).svg"></a>
+    <div class="iconbar">
+    <a href="choose.html" title="LOGIN"><img src="Source/2(1).svg"></a>
+    </div>
+  </nav>
+
+  <section>
+    <div class="formchoose" >
+        <div class="whiteside">
+            <img class="animate__animated animate__fadeIn" src="Source/icon2.svg" alt="Profile Icon">
+            <h2>SELLER</h2>
+            <p style="width:80%;  margin: auto; font-size: 16px; padding-bottom: 10px;">Create an account to promote your products and make profit.</p>
+            <button class="animate__animated animate__pulse"><a href="registerowner.html" style="text-decoration: none;color: white;">CREATE ACCOUNT <i class="fa fa-chevron-right"></i></a></button>
+            <hr style="width:100%;">
+            <h4 style="font-weight: lighter; margin: 0px 0px 5px 0px;">Already have an account?</h4>
+            <a href="loginowner.html" style="font-weight: bold; color: black;">SIGN IN</a>
+        </div>
+        <div class="blueside">
+            <img class="animate__animated animate__fadeIn" src="Source/icon2.svg" alt="Profile Icon">
+            <h2>CUSTOMER</h2>
+            <p style="width:80%;  margin: auto; font-size: 16px; padding-bottom: 10px;">Create an account to purchase goods from seller.</p>
+            <button class="animate__animated animate__pulse"><a href="registershopper.html" style="text-decoration: none;color: white;">CREATE ACCOUNT <i class="fa fa-chevron-right"></i></a></button>
+            <hr style="width:100%;">
+            <h4 style="font-weight: lighter; margin: 0px 0px 5px 0px;">Already have an account?</h4>
+            <a  href="loginshopper.html" style="font-weight: bold; color: black;">SIGN IN</a>
+        </div>
+    </div>
+  </section>
+
+  <footer>
+  </footer>
+
+</body>
+
+</html>

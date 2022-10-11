@@ -1,0 +1,155 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="external.css">
+  <script src="external.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="shortcut icon" type="image/x-icon" href="/Source/faviconnnn.png" />
+  <script src="https://kit.fontawesome.com/b830ea945f.js" crossorigin="anonymous"></script>
+
+  <title>e-Niaga</title>
+
+  <style>
+    .myorder{
+    font-size: 20px;
+    font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    background-color: #003a87;
+    width: 62%;
+    border-radius: 10px;
+    padding: 15px 0px;
+    margin: 30px auto;
+    text-align: center;
+    }
+
+    .myorderwrap{
+    color:#003a87;
+    background-color: #ffffff;
+    width: 62%;
+    height: 500px;
+    margin: 0px auto 30px auto;
+    }
+
+    section{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 1.618em;
+    }
+
+    .uploadcontainer{
+    text-align: center;
+    padding-top: 50px;
+    }
+
+    .uploadcontainer label {
+    display: inline-block;
+    width: 25%;
+    text-align: left;
+    padding-right: 50px;
+    font-size: 18px;
+    }
+
+    .uploadcontainer input, select{
+    padding: 7px 10px;
+    width: 45%;
+    background-color: rgb(244, 244, 244);
+    border: 1px solid black;
+    }
+
+    button[type=submit] {
+      background-color: #003a87;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 20px 20px 0px 0px;
+      width: 30%;
+    }
+
+    button[type=submit]:hover {
+      background-color: #ffffff;
+      color: #003a87;
+      border: 2px solid #003a87;
+    }
+
+    .iconbars a{
+      color: #003a87;
+      float: right;
+      font-size: 25px;
+      margin:5px 7px;
+    }
+  </style>
+
+</head>
+
+<body class="homeshopper">
+  <nav>
+    <a class="logo" href="homeowner.php" title="e-NIAGA"><img src="Source/1(1).svg"></a>
+    <div class="iconbars">
+      
+    <a href="logout.php" title="Logout"><i class="fa-solid fa-right-from-bracket"></i></a>
+    <a href="accownerviews.php" title="Account"><i class="fa-solid fa-user"></i></a>
+    <a href="orderowner.php" title="Order"><i class="fa-solid fa-list-check"></i></a>
+    <a href="productowner.php" title="Product"><i class="fa-solid fa-bag-shopping"></i></a>
+    </div>
+  </nav>
+
+  <section>
+    <header class="myorder">
+      UPLOAD PRODUCT
+    </header>
+
+    <div class="myorderwrap">
+        <form class='uploadcontainer'  method='POST' action='uploadproducts.php'>
+            <div>
+              <label for='name'>Product Name</label>
+              <input type='text' name='pname'>
+            </div><br>
+
+            <div>
+              <label for='mnum'>Category</label>
+              <select class="select-category" name="category">
+                <option>Select Category</option>
+                <option value="Food">Food</option>
+                <option value="Service">Service</option>
+                <option value="Prelove">Prelove</option>
+                <option value="Skincare">Skincare</option>
+                <option value="Shirt">Shirt</option>
+              </select>            
+            </div><br>
+
+            <div>
+              <label for='pprice'>Price</label>
+              <input type='text' name='pprice' id='pprice' placeholder="RM">
+            </div><br>
+
+            <div>
+              <label for='pquantity'>Quantity</label>
+              <input type='text' name='pquantity' id='pquantity'>
+            </div><br>
+
+            <div>
+              <label for='pdesc'>Description</label>
+              <input type='text' name='pdesc' id='pdesc'>
+            </div><br>
+
+            <div>
+                <label for='pdesc'>Image</label>
+                <input type='file' name='productimage' id="productimage">
+              </div><br>
+            <button type='submit' value="Back" formaction="/e-Niaga/productowner.php">BACK</button>
+            <button type='submit'>UPLOAD</button>
+           
+            </form>
+    </div>
+
+  </section>
+
+  <footer>
+  </footer>
+
+</body>
+
+</html>
